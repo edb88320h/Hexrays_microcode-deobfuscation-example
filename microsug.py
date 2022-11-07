@@ -23,9 +23,9 @@ class deobfuscate_t(optinsn_t):
         return 0
 
 
-class deobf_plugin_t(ida_idaapi.plugin_t):
+class microsug_plugin_t(ida_idaapi.plugin_t):
     flags = ida_idaapi.PLUGIN_HIDE
-    wanted_name = "Microcode deobfuscation"
+    wanted_name = "Microsug"
     wanted_hotkey = ""
     comment = "A simple plugin to deobfuscate any dword-obfuscated code if this value is set to zero"
     help = ""
@@ -40,4 +40,4 @@ class deobf_plugin_t(ida_idaapi.plugin_t):
             pass
 
 def PLUGIN_ENTRY():
-    return deobf_plugin_t()
+    return microsug_plugin_t()
